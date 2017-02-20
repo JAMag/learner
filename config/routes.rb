@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :sessions => "sessions", :registrations => "registrations" }
 
-  resources :schools do
+  resources :schools
 
-  end
+
 
   resources :courses do
-
+    resources :chapters
   end
+
+
+
 
   #users
   get "/my_current_user" => "users#my_current_user"
