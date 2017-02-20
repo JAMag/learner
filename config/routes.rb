@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   end
 
+  resources :courses do
+
+  end
+
+  #users
   get "/my_current_user" => "users#my_current_user"
 
   match 'users/:id' => 'users#update_user', via: [:patch]
